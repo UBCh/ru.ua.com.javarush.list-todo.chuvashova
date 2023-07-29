@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=todo'
+      - 'MYSQL_PASSWORD=pass'
+      - 'MYSQL_ROOT_PASSWORD=pass'
+      - 'MYSQL_USER=app'
+    ports:
+      - '3306'
+  tomcat:
+    image: tomcat:8.5-jre8
+    ports:
+      - "8080:8080"
+    container_name: tomcat
+    volumes:
+      - ./logs/:/usr/local/tomcat/logs/
