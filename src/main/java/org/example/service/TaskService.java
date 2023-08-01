@@ -18,10 +18,10 @@ public class TaskService {
 
     @Autowired
     public void setTaskDao(TaskDao taskDao) {
-	this.taskDao = taskDao;
+        this.taskDao = taskDao;
     }
 
-//
+
 //    public void saveNewTask(TaskDto taskDto) {
 //	taskDao.save(taskDto);
 //
@@ -29,49 +29,49 @@ public class TaskService {
 
 
     public Task findByIdTask(Long id) {
-	return taskDao.findById(id).orElseThrow();
+        return taskDao.findById(id).orElseThrow();
     }
 
 
     public void deleteTask(Long id) {
-	taskDao.deleteById(id);
+        taskDao.deleteById(id);
     }
 
 
     public List<Task> findByAllTask() {
-	return sorteListTask(taskDao.getTaskByStatusIsNotNull());
+        return sorteListTask(taskDao.getTaskByStatusIsNotNull());
     }
 
 
     public Task editDescriptionTask(Long id, String description) {
-	taskDao.updateDescriptionById(description, id);
-	return taskDao.findById(id).orElseThrow();
+        taskDao.updateDescriptionById(description, id);
+        return taskDao.findById(id).orElseThrow();
     }
 
 
     public Task editStatusTask(Long id, Status status) {
-	taskDao.updateStatusById(status, id);
-	return taskDao.findById(id).orElseThrow();
+        taskDao.updateStatusById(status, id);
+        return taskDao.findById(id).orElseThrow();
     }
 
 
     private List<Task> sorteListTask(List<Optional<Task>> tasks) {
-	List<Task> sorteTask = new ArrayList<>();
-	List<Task> sorteTask_done = new ArrayList<>();
-	List<Task> sorteTask_isProgress = new ArrayList<>();
-	List<Task> sorteTask_pause = new ArrayList<>();
-	for (Optional optionalTask : tasks) {
-	    Task task = (Task) optionalTask.orElseThrow();
-	    switch (task.getStatus()) {
-		case DONE -> sorteTask_done.add(task);
-		case PAUSED -> sorteTask_pause.add(task);
-		case IN_PROGRESS -> sorteTask_isProgress.add(task);
-	    }
-	    sorteTask.addAll(sorteTask_isProgress);
-	    sorteTask.addAll(sorteTask_pause);
-	    sorteTask.addAll(sorteTask_done);
-	}
-	return sorteTask;
+        List<Task> sorteTask = new ArrayList<>();
+        List<Task> sorteTask_done = new ArrayList<>();
+        List<Task> sorteTask_isProgress = new ArrayList<>();
+        List<Task> sorteTask_pause = new ArrayList<>();
+        for (Optional optionalTask : tasks) {
+            Task task = (Task) optionalTask.orElseThrow();
+            switch (task.getStatus()) {
+                case DONE -> sorteTask_done.add(task);
+                case PAUSED -> sorteTask_pause.add(task);
+                case IN_PROGRESS -> sorteTask_isProgress.add(task);
+            }
+            sorteTask.addAll(sorteTask_isProgress);
+            sorteTask.addAll(sorteTask_pause);
+            sorteTask.addAll(sorteTask_done);
+        }
+        return sorteTask;
     }
 
 }

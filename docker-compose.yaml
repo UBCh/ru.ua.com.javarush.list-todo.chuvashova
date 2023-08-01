@@ -15,3 +15,6 @@ services:
     container_name: tomcat
     volumes:
       - ./logs/:/usr/local/tomcat/logs/
+      - ./target/:/usr/local/tomcat/webapp/
+    depends_on:
+      - mysql

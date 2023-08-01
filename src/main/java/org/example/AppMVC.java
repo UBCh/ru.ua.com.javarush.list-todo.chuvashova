@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "org.example")
 public class AppMVC {
     public static void main(String[] args) {
 	ConfigurableApplicationContext run = SpringApplication.run(AppMVC.class, args);
