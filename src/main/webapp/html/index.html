@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html :th="https://www.thymleaf.org" lang="en" xmlns>
+<!--<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>description</th>
+        <th>status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task, number : ${allTasks}">
+        <td th:text="${task.id}"></td>
+        <td th:id="'description_'+${task.id}" th:text="${task.description}"></td>
+        <td th:id="'status_'+${task.id}" th:text="${task.status}"></td>
+    </tr>
+
+    </tbody>
+</table>
+<h2>Hello World! index.html</h2>
+</body>
+</html>

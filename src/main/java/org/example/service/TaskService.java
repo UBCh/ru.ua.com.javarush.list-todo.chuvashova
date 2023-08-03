@@ -1,12 +1,12 @@
 package org.example.service;
 
-import org.example.DAO.TaskDao;
+import org.example.dao.TaskDao;
 import org.example.domain.Status;
 import org.example.domain.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,60 +18,62 @@ public class TaskService {
 
     @Autowired
     public void setTaskDao(TaskDao taskDao) {
-        this.taskDao = taskDao;
+
+	this.taskDao = taskDao;
     }
-
-
-//    public void saveNewTask(TaskDto taskDto) {
-//	taskDao.save(taskDto);
-//
-//    }
 
 
     public Task findByIdTask(Long id) {
-        return taskDao.findById(id).orElseThrow();
+	return taskDao.findById(id).orElseThrow();
     }
 
 
-    public void deleteTask(Long id) {
-        taskDao.deleteById(id);
+    public void deleteTaskbyId(Long id) {
+	Optional<Task> byId = taskDao.findById(id);
+	if (checkAvailabilityTask(byId)) {
+	    taskDao.delete(byId.orElseThrow());
+	}
+
     }
 
 
-    public List<Task> findByAllTask() {
-        return sorteListTask(taskDao.getTaskByStatusIsNotNull());
+    public List<Task> findByAllTask(int offset, int limit) {
+	return taskDao.findAll().subList(offset, limit);
     }
 
 
-    public Task editDescriptionTask(Long id, String description) {
-        taskDao.updateDescriptionById(description, id);
-        return taskDao.findById(id).orElseThrow();
+    public Long countAll() {
+	return taskDao.count();
     }
 
 
-    public Task editStatusTask(Long id, Status status) {
-        taskDao.updateStatusById(status, id);
-        return taskDao.findById(id).orElseThrow();
+    @Transactional
+    public Task editTask(Long id, String description, Status status) {
+	Optional<Task> byId = taskDao.findById(id);
+	if (checkAvailabilityTask(byId)) {
+	    Task task = byId.orElseThrow();
+	    task.setDescription(description);
+	    task.setStatus(status);
+
+	    return taskDao.save(task);
+	}
+	return null;
     }
 
 
-    private List<Task> sorteListTask(List<Optional<Task>> tasks) {
-        List<Task> sorteTask = new ArrayList<>();
-        List<Task> sorteTask_done = new ArrayList<>();
-        List<Task> sorteTask_isProgress = new ArrayList<>();
-        List<Task> sorteTask_pause = new ArrayList<>();
-        for (Optional optionalTask : tasks) {
-            Task task = (Task) optionalTask.orElseThrow();
-            switch (task.getStatus()) {
-                case DONE -> sorteTask_done.add(task);
-                case PAUSED -> sorteTask_pause.add(task);
-                case IN_PROGRESS -> sorteTask_isProgress.add(task);
-            }
-            sorteTask.addAll(sorteTask_isProgress);
-            sorteTask.addAll(sorteTask_pause);
-            sorteTask.addAll(sorteTask_done);
-        }
-        return sorteTask;
+    public Task craeteTask(String description, Status status) {
+	Task task = new Task();
+	task.setDescription(description);
+	task.setStatus(status);
+	return taskDao.save(task);
+    }
+
+
+    private Boolean checkAvailabilityTask(Optional optional) {
+	if (optional != null) {
+	    return true;
+	}
+	throw new RuntimeException("task not found");
     }
 
 }

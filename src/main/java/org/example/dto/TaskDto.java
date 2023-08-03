@@ -1,4 +1,4 @@
-package org.example.DTO;
+package org.example.dto;
 
 import lombok.*;
 import org.example.domain.Status;

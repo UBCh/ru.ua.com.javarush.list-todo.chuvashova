@@ -12,9 +12,9 @@ services:
     image: tomcat:8.5-jre8
     ports:
       - "8080:8080"
-    container_name: tomcat
+    container_name: tomcat-docker
     volumes:
       - ./logs/:/usr/local/tomcat/logs/
-      - ./target/:/usr/local/tomcat/webapp/
+      - ./target/:/usr/local/tomcat/webapps/
     depends_on:
       - mysql
