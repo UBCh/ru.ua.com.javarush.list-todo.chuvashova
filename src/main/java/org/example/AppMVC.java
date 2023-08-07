@@ -14,12 +14,12 @@ public class AppMVC {
 	ConfigurableApplicationContext run = SpringApplication.run(AppMVC.class, args);
 
 	TaskService service = run.getBean(TaskService.class);
-	List<Task> all = service.findByAllTask(1, 10);
+	List<Task> all = service.findByAllTask(1, 15);
 	for (Task task : all) {
 	    System.out.println(task);
 	}
 
-	Task task = service.findByIdTask(3L);
+	Task task = service.findByIdTask(13L);
 	System.out.println(task);
 
     }

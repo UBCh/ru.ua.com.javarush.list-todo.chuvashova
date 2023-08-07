@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-<html :th="https://www.thymleaf.org" lang="en" xmlns>
-<!--<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>Tasks</title>
+    <!--    <link href="/style/main.css" rel="stylesheet">-->
 </head>
 <body>
+
+<h1>TODO-LIST</h1>
+
+
 <table>
     <thead>
     <tr>
-        <th>id</th>
-        <th>description</th>
-        <th>status</th>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Status</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="task, number : ${allTasks}">
+    <tr th:each="task,number : ${allTasks}">
         <td th:text="${task.id}"></td>
         <td th:id="'description_'+${task.id}" th:text="${task.description}"></td>
         <td th:id="'status_'+${task.id}" th:text="${task.status}"></td>
     </tr>
 
+        </td>
+
+    </tr>
     </tbody>
 </table>
+<br>
+<table>
+
+</table>
+<br>
+<br>
+
 <h2>Hello World! index.html</h2>
+
+
 </body>
+
 </html>
+

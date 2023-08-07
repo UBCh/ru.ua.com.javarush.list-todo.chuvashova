@@ -61,10 +61,10 @@ public class TaskService {
     }
 
 
-    public Task craeteTask(String description, Status status) {
+    public Task craeteTask(String description) {
 	Task task = new Task();
 	task.setDescription(description);
-	task.setStatus(status);
+	task.setStatus(Status.PAUSED);
 	return taskDao.save(task);
     }
 

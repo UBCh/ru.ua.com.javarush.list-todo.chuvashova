@@ -9,24 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="add WebApp">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spy.propertis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/html/index.html" afterDir="false" />
+    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="add thymeleaf">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppMVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppMVC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DAO/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/TaskDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DTO/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/WebApp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spy.propertis" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTTP Public Environment File" />
+        <option value="HTTP Private Environment File" />
       </list>
     </option>
   </component>
@@ -77,52 +78,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/project-front&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/work/list-todo/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d37b472fed8d1e4f0cbcef6749c6ef37&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "last_opened_file_path": "C:/work/todo-list",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/work/list-todo/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "spring.configuration.checksum": "d37b472fed8d1e4f0cbcef6749c6ef37",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\list-todo\archive" />
       <recent name="C:\work\list-todo\src\main\webapp\WEB-INF\html" />
       <recent name="C:\work\list-todo\src\main\resources" />
       <recent name="C:\work\list-todo\src\main\webapp" />
       <recent name="C:\work\list-todo\src\main\webapp\WEB-INF" />
-      <recent name="C:\work\list-todo\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\list-todo\src\main\resources\templates" />
+      <recent name="C:\work\list-todo\src\main\resources" />
       <recent name="C:\work\list-todo\src\main\webapp" />
       <recent name="C:\work\list-todo\src\main\webapp\html" />
-      <recent name="C:\work\list-todo\src\main\resources" />
       <recent name="C:\work\list-todo\src\main\webapp\WEB-INF\html" />
-      <recent name="C:\work\list-todo\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.config" />
@@ -135,14 +136,17 @@
       <command value="mvn spring-boot: site:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.appTodo">
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.AppMVC">
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" requestIdentifier="#6" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="AppMVC" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -174,94 +178,6 @@
       <option name="specificationPath" value="C:\Users\u2b12\AppData\Roaming\JetBrains\IntelliJIdea2023.1\openApiExport\list_todo-openapi.yaml" />
       <method v="2" />
     </configuration>
-    <configuration name="appTodo" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="list-todo:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="0e7c3d4f-eb2c-45ec-95fa-47e1017a9444" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50982" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="list-todo:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -277,35 +193,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml.tomcat: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="tomcat" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yaml.tomcat: Compose Deployment" />
-      <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="HTTP Request.generated-requests | #4" />
+      <item itemvalue="HTTP Request.generated-requests | #5" />
+      <item itemvalue="HTTP Request.generated-requests | #6" />
       <item itemvalue="HTTP Request.generated-requests | #3" />
       <item itemvalue="Spring Boot.AppMVC" />
-      <item itemvalue="Tomcat Server.appTodo" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AppMVC" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
-        <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="Docker.docker-compose.yaml.tomcat: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #6" />
+        <item itemvalue="HTTP Request.generated-requests | #5" />
+        <item itemvalue="HTTP Request.generated-requests | #4" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +227,8 @@
       <workItem from="1690805379592" duration="25943000" />
       <workItem from="1691000925394" duration="4923000" />
       <workItem from="1691053009973" duration="15225000" />
-      <workItem from="1691080645889" duration="4900000" />
+      <workItem from="1691080645889" duration="20156000" />
+      <workItem from="1691145718519" duration="18303000" />
     </task>
     <task id="LOCAL-00001" summary="add back-end">
       <created>1690643312898</created>
@@ -348,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690983946883</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add thymeleaf">
+      <created>1691085756195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691085756195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +278,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add back-end" />
     <MESSAGE value="add WebApp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add WebApp" />
+    <MESSAGE value="add thymeleaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="add thymeleaf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -378,13 +289,13 @@
           <line>126</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.catalina.core.ApplicationMapping" memberName="mapping" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

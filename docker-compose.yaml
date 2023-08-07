@@ -15,6 +15,6 @@ services:
     container_name: tomcat-docker
     volumes:
       - ./logs/:/usr/local/tomcat/logs/
-      - ./target/:/usr/local/tomcat/webapps/
+      - ./archive/:/usr/local/tomcat/webapps/
     depends_on:
       - mysql
