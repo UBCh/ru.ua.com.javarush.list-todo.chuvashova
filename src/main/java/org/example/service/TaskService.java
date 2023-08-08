@@ -28,6 +28,7 @@ public class TaskService {
     }
 
 
+    @Transactional
     public void deleteTaskbyId(Long id) {
 	Optional<Task> byId = taskDao.findById(id);
 	if (checkAvailabilityTask(byId)) {
@@ -61,6 +62,7 @@ public class TaskService {
     }
 
 
+    @Transactional
     public Task craeteTask(String description) {
 	Task task = new Task();
 	task.setDescription(description);

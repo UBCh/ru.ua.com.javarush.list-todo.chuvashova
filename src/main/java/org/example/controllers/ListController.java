@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Controller
 @EnableWebMvc
@@ -27,7 +29,8 @@ public class ListController {
 			       @RequestParam(value = "limit", required = false, defaultValue = "10") int limit) {
 	List<Task> byAllTask = taskService.findByAllTask((page - 1) * limit, limit);
 	model.addAttribute("allTasks", byAllTask);
-
+	model.addAttribute("currentPage", page);
+	setPageButton(model, limit);
 	return "index";
     }
 
@@ -48,17 +51,16 @@ public class ListController {
 			  @RequestBody TaskDto taskDto) {
 	Task task = taskService.craeteTask(taskDto.getDescription());
 	model.addAttribute("newTask", task);
-	return showAllTasks(model, 1, 15);
+	return showAllTasks(model, 1, 10);
     }
 
 
-    @DeleteMapping("/{id}")
-    public String deleteTask(Model model,
-			     @PathVariable Long id) {
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    public String deleteTask(Model model, @PathVariable Long id) {
 	if (checkIdTask(id)) {
 	    taskService.deleteTaskbyId(id);
 	}
-	return showAllTasks(model, 1, 15);
+	return showAllTasks(model, 1, 10);
     }
 
 
@@ -69,6 +71,14 @@ public class ListController {
 	throw new RuntimeException("id invalide");
     }
 
+
+    private void setPageButton(Model model, int limit) {
+	int totalPage = (int) Math.ceil(1.0 * taskService.countAll() / limit);
+	if (totalPage > 1) {
+	    List<Integer> pageNumbers = IntStream.rangeClosed(1, totalPage).boxed().collect(Collectors.toList());
+	    model.addAttribute("pageNumbers", pageNumbers);
+	}
+    }
 }
 
 

@@ -14,7 +14,7 @@ public class AppMVC {
 	ConfigurableApplicationContext run = SpringApplication.run(AppMVC.class, args);
 
 	TaskService service = run.getBean(TaskService.class);
-	List<Task> all = service.findByAllTask(1, 15);
+	List<Task> all = service.findByAllTask(1, 10);
 	for (Task task : all) {
 	    System.out.println(task);
 	}

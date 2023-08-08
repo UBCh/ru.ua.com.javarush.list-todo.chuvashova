@@ -4,7 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Tasks</title>
-    <!--    <link href="/style/main.css" rel="stylesheet">-->
+    <style>
+        td, th {
+            font-size: large;
+            border: solid;
+            color: black;
+        }
+
+        .button-page {
+            color: white;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 20px;
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,21 +38,28 @@
         <td th:text="${task.id}"></td>
         <td th:id="'description_'+${task.id}" th:text="${task.description}"></td>
         <td th:id="'status_'+${task.id}" th:text="${task.status}"></td>
-    </tr>
-
+        <td>
+            <form th:action="@{/{id}/edit(id=${task.id})/}" th:method="POST">
+                <button type="submit">Edit</button>
+            </form>
         </td>
-
+        <td>
+            <form action="#" th:action="@{'/list/delete/{id}'(id=${task.id})}" th:method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
     </tr>
+
+
     </tbody>
 </table>
 <br>
-<table>
-
-</table>
 <br>
 <br>
-
-<h2>Hello World! index.html</h2>
+<button class="button-page" th:each="pageNumber : ${pageNumbers}">
+    <a th:classappend="${pageNumber == currentPage? 'active_page':''}" th:href="@{/(page=${pageNumber}, limit=10)}"
+       th:text="${pageNumber}"></a>
+</button>
 
 
 </body>
