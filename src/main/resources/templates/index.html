@@ -39,7 +39,7 @@
         <td th:id="'description_'+${task.id}" th:text="${task.description}"></td>
         <td th:id="'status_'+${task.id}" th:text="${task.status}"></td>
         <td>
-            <form th:action="@{/{id}/edit(id=${task.id})/}" th:method="POST">
+            <form th:action="@{'/list/edit/{id}'(id=${task.id})}" th:method="GET">
                 <button type="submit">Edit</button>
             </form>
         </td>
@@ -57,7 +57,7 @@
 <br>
 <br>
 <button class="button-page" th:each="pageNumber : ${pageNumbers}">
-    <a th:classappend="${pageNumber == currentPage? 'active_page':''}" th:href="@{/(page=${pageNumber}, limit=10)}"
+    <a th:classappend="${pageNumber == currentPage? 'active_page':''}" th:href="@{/list/(page=${pageNumber}, limit=10)}"
        th:text="${pageNumber}"></a>
 </button>
 

@@ -35,22 +35,29 @@ public class ListController {
     }
 
 
-    @PostMapping("/{id}")
-    public void redactorTask(Model model,
-			     @PathVariable Long id,
-			     @RequestBody TaskDto taskDto) {
-	if (checkIdTask(id)) {
-	    taskService.editTask(id, taskDto.getDescription(), taskDto.getStatus());
-	}
+    @PostMapping("/editTask/{id}")
+    public String redactorTask(Model model, @PathVariable("id") Long id, @ModelAttribute Task task) {
+	task.setId(id);
+	if (checkIdTask(task.getId())) {
 
+	    taskService.editTask(task);
+	}
+	return showAllTasks(model, 1, 10);
+    }
+
+
+    @GetMapping("/edit/{id}")
+    public String editTask(Model model, @PathVariable("id") Long id) {
+	model.addAttribute("taskEdit", taskService.findByIdTask(id));
+	return "editTask";
     }
 
 
     @PostMapping("/add")
     public String addTask(Model model,
 			  @RequestBody TaskDto taskDto) {
-	Task task = taskService.craeteTask(taskDto.getDescription());
-	model.addAttribute("newTask", task);
+	taskService.craeteTask(taskDto.getDescription());
+	model.addAttribute("newTask", taskDto);
 	return showAllTasks(model, 1, 10);
     }
 
@@ -77,6 +84,7 @@ public class ListController {
 	if (totalPage > 1) {
 	    List<Integer> pageNumbers = IntStream.rangeClosed(1, totalPage).boxed().collect(Collectors.toList());
 	    model.addAttribute("pageNumbers", pageNumbers);
+
 	}
     }
 }

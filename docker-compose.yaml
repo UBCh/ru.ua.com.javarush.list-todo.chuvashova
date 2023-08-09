@@ -18,3 +18,4 @@ services:
       - ./archive/:/usr/local/tomcat/webapps/
     depends_on:
       - mysql
+#  dockerFile:COPY /target/app.jar my.jar

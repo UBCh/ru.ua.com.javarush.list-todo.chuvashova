@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+<br>
+<table>
+    <tr>
+        <form th:action="@{/list/add}" th:method="POST" th:object="${}">
+            <th>Add new task</th>
+
+            <th>
+                <input placeholder="Enter description" th:field="*{description}" type="text">
+            </th>
+
+            <th>
+                <select name="status">
+                    <option th:each="status : ${T(ru.javarush.november.maslennikov.spring1.domain.Status).values()}"
+                            th:text="${status}" th:value="${status}"></option>
+                </select>
+            </th>
+
+            <th>
+                <button type="submit">Save</button>
+            </th>
+        </form>
+    </tr>
+</table>
+
+</body>
+</html>

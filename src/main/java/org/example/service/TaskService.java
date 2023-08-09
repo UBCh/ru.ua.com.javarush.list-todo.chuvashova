@@ -13,6 +13,7 @@ import java.util.Optional;
 @Service
 public class TaskService {
 
+
     private TaskDao taskDao;
 
 
@@ -39,7 +40,8 @@ public class TaskService {
 
 
     public List<Task> findByAllTask(int offset, int limit) {
-	return taskDao.findAll().subList(offset, limit);
+	return taskDao.findAll().subList(offset, offset + limit);
+	
     }
 
 
@@ -49,16 +51,9 @@ public class TaskService {
 
 
     @Transactional
-    public Task editTask(Long id, String description, Status status) {
-	Optional<Task> byId = taskDao.findById(id);
-	if (checkAvailabilityTask(byId)) {
-	    Task task = byId.orElseThrow();
-	    task.setDescription(description);
-	    task.setStatus(status);
+    public void editTask(Task task) {
 
-	    return taskDao.save(task);
-	}
-	return null;
+	taskDao.save(task);
     }
 
 

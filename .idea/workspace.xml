@@ -9,13 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="implemented method ListController.showAllTasks">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/newForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="add button &quot;delete&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editTask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppMVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppMVC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,14 +74,14 @@
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "15",
-    "RequestMappingsPanelWidth1": "15",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "last_opened_file_path": "C:/work/todo-list",
+    "last_opened_file_path": "C:/work/project-front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -228,7 +230,7 @@
       <workItem from="1691000925394" duration="4923000" />
       <workItem from="1691053009973" duration="15225000" />
       <workItem from="1691080645889" duration="20156000" />
-      <workItem from="1691145718519" duration="29107000" />
+      <workItem from="1691145718519" duration="49916000" />
     </task>
     <task id="LOCAL-00001" summary="add back-end">
       <created>1690643312898</created>
@@ -265,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691422995836</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add button &quot;delete&quot;">
+      <created>1691508492708</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691508492708</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,44 +296,34 @@
     <MESSAGE value="add WebApp" />
     <MESSAGE value="add thymeleaf" />
     <MESSAGE value="implemented method ListController.showAllTasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented method ListController.showAllTasks" />
+    <MESSAGE value="add button &quot;delete&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add button &quot;delete&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controllers/ListController.java</url>
-          <line>58</line>
-          <properties class="org.example.controllers.ListController" method="deleteTask">
-            <option name="EMULATED" value="true" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java</url>
+          <line>41</line>
+          <properties class="org.example.service.TaskService" method="findByAllTask">
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
