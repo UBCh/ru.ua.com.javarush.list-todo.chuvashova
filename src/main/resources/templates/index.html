@@ -60,6 +60,14 @@
     <a th:classappend="${pageNumber == currentPage? 'active_page':''}" th:href="@{/list/(page=${pageNumber}, limit=10)}"
        th:text="${pageNumber}"></a>
 </button>
+<br>
+<br>
+<br>
+
+
+<form th:action="@{/list/add}" th:method="GET">
+    <button type="submit">create a new task</button>
+</form>
 
 
 </body>

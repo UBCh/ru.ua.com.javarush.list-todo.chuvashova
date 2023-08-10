@@ -1,7 +1,6 @@
 package org.example.service;
 
 import org.example.dao.TaskDao;
-import org.example.domain.Status;
 import org.example.domain.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,8 +39,14 @@ public class TaskService {
 
 
     public List<Task> findByAllTask(int offset, int limit) {
-	return taskDao.findAll().subList(offset, offset + limit);
-	
+	List<Task> all = taskDao.findAll();
+	if ((offset + limit) > all.size()) {
+	    var temp = all.size() % 10;
+	    temp = limit - temp;
+	    limit = limit - temp;
+	}
+
+	return all.subList(offset, offset + limit);
     }
 
 
@@ -58,10 +63,7 @@ public class TaskService {
 
 
     @Transactional
-    public Task craeteTask(String description) {
-	Task task = new Task();
-	task.setDescription(description);
-	task.setStatus(Status.PAUSED);
+    public Task craeteTask(Task task) {
 	return taskDao.save(task);
     }
 

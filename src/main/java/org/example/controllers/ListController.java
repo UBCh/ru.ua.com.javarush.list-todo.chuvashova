@@ -2,7 +2,6 @@ package org.example.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.example.domain.Task;
-import org.example.dto.TaskDto;
 import org.example.service.TaskService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,12 +52,18 @@ public class ListController {
     }
 
 
-    @PostMapping("/add")
-    public String addTask(Model model,
-			  @RequestBody TaskDto taskDto) {
-	taskService.craeteTask(taskDto.getDescription());
-	model.addAttribute("newTask", taskDto);
+    @PostMapping("/create")
+    public String addTask(@ModelAttribute Task task, Model model) {
+	Task createTask = new Task(task.getDescription());
+	taskService.craeteTask(createTask);
 	return showAllTasks(model, 1, 10);
+    }
+
+
+    @GetMapping("/add")
+    public String editTask(Model model) {
+	model.addAttribute("newTask", new Task());
+	return "newTask";
     }
 
 

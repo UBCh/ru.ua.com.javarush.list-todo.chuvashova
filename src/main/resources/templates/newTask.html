@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>newTask</title>
+
+</head>
+<body>
+<h1>to create a new task, fill in the "description" field</h1>
+<h2>When a new task is created, its status will be set to "PAUSED"</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Enter task description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <form id="createTask" th:action="@{/list/create}"
+              th:method="POST" th:object="${newTask}">
+
+            <th>
+                <input th:field="*{description}" type="text"/>
+            </th>
+
+        </form>
+    </tr>
+    </tbody>
+</table>
+<br>
+<button form="createTask" type="submit">save edit</button>
+
+</body>
+</html>

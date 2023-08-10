@@ -12,7 +12,6 @@ import lombok.*;
 @Entity
 @Table(name = "task")
 public class Task {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,4 +21,10 @@ public class Task {
 
 
     private Status status;
+
+
+    public Task(String description) {
+	this.description = description;
+	this.status = Status.PAUSED;
+    }
 }
