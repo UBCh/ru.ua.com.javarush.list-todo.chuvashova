@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="add button &quot;create newTask&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="2fca0fb5-043f-454a-a195-234c0a9b520e" name="Changes" comment="itogo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +225,7 @@
       <workItem from="1691053009973" duration="15225000" />
       <workItem from="1691080645889" duration="20156000" />
       <workItem from="1691145718519" duration="50944000" />
-      <workItem from="1691662878328" duration="15855000" />
+      <workItem from="1691662878328" duration="16194000" />
     </task>
     <task id="LOCAL-00001" summary="add back-end">
       <created>1690643312898</created>
@@ -286,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691682366793</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="itogo">
+      <created>1691687929307</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691687929307</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +315,8 @@
     <MESSAGE value="add button &quot;delete&quot;" />
     <MESSAGE value="add button &quot;edit&quot;, add Pagination for a List" />
     <MESSAGE value="add button &quot;create newTask&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add button &quot;create newTask&quot;" />
+    <MESSAGE value="itogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="itogo" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
