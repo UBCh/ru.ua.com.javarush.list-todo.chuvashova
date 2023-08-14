@@ -12,7 +12,7 @@ public class FrontController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public String getHomePage() {
-	return "redirect:/list/";  // localhost:8080/list/
+	return "redirect:/list/";
     }
 
 }
